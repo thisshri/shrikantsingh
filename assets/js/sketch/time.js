@@ -1,3 +1,4 @@
+alert("Press F11 to view in full screen, try, it looks good.")
 function setup() {
 
     let clientWidth = window.displayWidth
