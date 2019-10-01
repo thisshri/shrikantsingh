@@ -1,7 +1,8 @@
+alert("Press F11 to view in full screen, try, it looks good.")
 function setup() {
 
-    let clientWidth = document.body.clientWidth
-    let clientHeight = document.body.clientHeight
+    let clientWidth = window.displayWidth
+    let clientHeight = window.displayHeight
     
     frameRate(100)
     createCanvas(clientWidth, clientHeight)
