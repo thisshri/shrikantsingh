@@ -1,7 +1,7 @@
 function setup() {
 
-    let clientWidth = document.body.clientWidth
-    let clientHeight = document.body.clientHeight
+    let clientWidth = window.displayWidth
+    let clientHeight = window.displayHeight
     
     frameRate(100)
     createCanvas(clientWidth, clientHeight)
