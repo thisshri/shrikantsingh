@@ -40,32 +40,59 @@
 </head>
 
 <body style="background-color: bisque;">
-  <div class="container">
+  <div class="container pt-5">
     <div class="row">
-      <div class="col-sm-12 col-md-4 text-center">
-        <img class="img-fluid rounded-circle p-5" style="width: 500px" src="./assets/img/profile_picture.jpg"
-          alt="Profile picture">
-        <h1 class="ubuntu-font">Shrikant Singh</h1>
-        <div class="pt-5">
-          <a class="profile-icon"
-            href="&#109;&#097;&#105;&#108;&#116;&#111;:&#116;&#104;&#105;&#115;&#115;&#104;&#114;&#105;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;"><i
-              class="fa fa-envelope"></i></a>
-          <a class="profile-icon" href="https://www.linkedin.com/in/thisshri/"><i class="p-2 fa fa-linkedin"
-              aria-hidden="true"></i></a>
-          <a class="profile-icon" href="https://github.com/thisshri"><i class="p-2 fa fa-github-alt"
-              aria-hidden="true"></i></a>
-          <a class="profile-icon" href="https://www.facebook.com/thisshri"><i class="fa fa-facebook"
-              aria-hidden="true"></i></a>
-          <a class="profile-icon" href="https://twitter.com/thisshri"><i class="p-2 fa fa-twitter"
-              aria-hidden="true"></i></a>
-          <a class="profile-icon" href="https://www.instagram.com/shrikant.singh/"><i class="p-2 fa fa-instagram"
-              aria-hidden="true"></i></a>
+      <div class="col-sm-12 col-md-4">
+
+        <!--User info section-->
+        <div class="text-center pb-5">
+          <img class="img-fluid rounded-circle m-3" style="width: 100px" src="./assets/img/profile_picture.jpg"
+            alt="Profile picture">
+          <h1 class="ubuntu-font">Shrikant Singh</h1>
+          <!--Social media links-->
+          <div>
+            <a
+              class="profile-icon"
+              href="&#109;&#097;&#105;&#108;&#116;&#111;:&#116;&#104;&#105;&#115;&#115;&#104;&#114;&#105;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;"
+            ><i class="fa fa-envelope"></i>
+            </a>
+            <a class="profile-icon" href="https://www.linkedin.com/in/thisshri/">
+              <i class="p-2 fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a class="profile-icon" href="https://github.com/thisshri">
+              <i class="p-2 fa fa-github-alt" aria-hidden="true"></i>
+            </a>
+            <a class="profile-icon" href="https://www.facebook.com/thisshri">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a class="profile-icon" href="https://twitter.com/thisshri">
+              <i class="p-2 fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a class="profile-icon" href="https://www.instagram.com/shrikant.singh/">
+              <i class="p-2 fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
         </div>
       </div>
-      <div class="col-sm-12 col-md-8">
-        <h2 class="text-center pt-5 mt-5">
-          New sections coming soon. :)
-        </h2>
+
+      <div style="font-family: monospace;" class="col-sm-12 col-md-8 text-center">
+        <h3>Movies watched recently</h3>
+        <table style="font-size: 1rem;" class="table table-striped">
+          <thead>
+            <tr>
+              <th style="max-width: 460px;">Name</th>
+              <th>Rated (out of 10)</th>
+              <th>Watched On</th>
+            </tr>
+          </thead>
+          <tbody id="movie-table-body">
+          </tbody>
+        </table>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.js" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.js" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" ></script>
+        <script src="./assets/js/watched-movies.js"></script>
       </div>
     </div>
   </div>
