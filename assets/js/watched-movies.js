@@ -14,18 +14,14 @@ const CSV_TITLE = [
   "Directors"
 ]
 
-function onCSVDownload({data , error}) {
-  const sortedMovies = _.reverse(
-    _.sortBy(
-      data,
-      _.iteratee(movie => movie[_.indexOf(CSV_TITLE, "Date Rated")]))
-  ).slice(2); //and removing blank line and CSV title
-  
-  // TODO see if empty line can be ignored
+let ALL_MOVIES = [];
 
-  const movieItem = _.map(
-    sortedMovies.slice(0, 10),
-    (movie, index) => `<tr>
+const generateMovieTableBody = function(movies) {
+    document.getElementById(
+      'movie-table-body'
+    ).innerHTML = _.map(
+      movies.slice(0, 10),
+      (movie, index) => `<tr>
       <th>${movie[_.indexOf(CSV_TITLE, "Title")]}</th>
       <td>${movie[_.indexOf(CSV_TITLE, "Your Rating")]}</td>
       <td>${moment(movie[_.indexOf(CSV_TITLE, "Date Rated")]).calendar(null, {
@@ -34,11 +30,32 @@ function onCSVDownload({data , error}) {
         lastWeek: '[Last] dddd',
         sameElse: 'DD/MM/YYYY'
       })}</td>
-    </tr>`
-  );
+      </tr>`
+      ).join('');
+  }
 
-    document.getElementById('movie-table-body').innerHTML = movieItem.join('');
+function onCSVDownload({data , error}) {
+  const sortedMovies = _.reverse(
+    _.sortBy(
+      data,
+      _.iteratee(movie => movie[_.indexOf(CSV_TITLE, "Date Rated")]))
+  ).slice(2); //and removing blank line and CSV title
+
+  // TODO see if empty line can be ignored
+
+  ALL_MOVIES = sortedMovies
+  generateMovieTableBody(sortedMovies);
 }
+
+const movieSearchField = document.getElementById('movie-search-field')
+movieSearchField.oninput = function (e) {
+  generateMovieTableBody(
+    _.filter(
+      ALL_MOVIES,
+      movie => movie[_.indexOf(CSV_TITLE, "Title")].toLowerCase().includes(e.target.value.toLowerCase())
+    )
+  )
+};
 
 Papa.parse(
   '../../ratings.csv',
