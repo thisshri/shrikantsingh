@@ -22,7 +22,13 @@ const generateMovieTableBody = function(movies) {
     ).innerHTML = _.map(
       movies.slice(0, 10),
       (movie, index) => `<tr>
-      <th>${movie[_.indexOf(CSV_TITLE, "Title")]}</th>
+      <th>
+        <a
+          href=${movie[_.indexOf(CSV_TITLE, "URL")]}
+          target=_blank
+        >
+          ${movie[_.indexOf(CSV_TITLE, "Title")]}</th>
+        </a>
       <td>${movie[_.indexOf(CSV_TITLE, "Your Rating")]}</td>
       <td>${moment(movie[_.indexOf(CSV_TITLE, "Date Rated")]).calendar(null, {
         sameDay: '[Today]',
