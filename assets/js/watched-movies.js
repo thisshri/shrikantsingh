@@ -51,6 +51,8 @@ function onCSVDownload({data , error}) {
 
   ALL_MOVIES = sortedMovies
   generateMovieTableBody(sortedMovies);
+
+  document.getElementsByTagName('body')[0].style.setProperty("cursor", "auto")
 }
 
 const movieSearchField = document.getElementById('movie-search-field')
