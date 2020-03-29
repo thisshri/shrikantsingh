@@ -1,3 +1,12 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.profile {
+    flex-direction: column;
+    margin: 100px 0px 100px 0px;
+}
+
 .profile-icon {
     text-decoration: none;
     font-size: larger;

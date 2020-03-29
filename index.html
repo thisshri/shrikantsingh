@@ -39,14 +39,31 @@
   <title>Shrikant Singh</title>
 </head>
 
-<body style="background-color: bisque; cursor: wait;">
-  <div class="container pt-5">
-    <div class="row">
-      <div class="col-sm-12 col-md-4">
-
-        <!--User info section-->
-        <div class="text-center pb-5">
-          <img class="img-fluid rounded-circle m-3" style="width: 100px" src="./assets/img/profile_picture.jpg"
+<body style="cursor: wait;">
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Shrikant</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav ml-auto mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#movie-table">Movies</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <!--User info section-->
+    <div class="jumbotron profile">
+      <div class="text-center">
+        <div>
+          <img
+            class="img-fluid rounded-circle m-3"
+            style="width: 200px" src="./assets/img/profile_picture.jpg"
             alt="Profile picture">
           <h1 class="ubuntu-font">Shrikant Singh</h1>
           <!--Social media links-->
@@ -71,36 +88,45 @@
             <a class="profile-icon" href="https://www.instagram.com/shrikant.singh/">
               <i class="p-2 fa fa-instagram" aria-hidden="true"></i>
             </a>
-          </div>
+        </div>
         </div>
       </div>
-
-      <div style="font-family: monospace;" class="col-sm-12 col-md-8 text-center">
-        <h3>Movies watched recently</h3>
-
-        <div class="input-group input-group-sm">
-            <span class="input-group-text" id="inputGroup-sizing-sm">Search Movie</span>
-          <input id="movie-search-field" type="text" class="form-control" aria-label="Small">
-        </div>
-        
-        <table style="font-size: 1rem;" class="table table-striped">
-          <thead>
-            <tr>
-              <th style="max-width: 460px;">Name</th>
-              <th>Rated (out of 10)</th>
-              <th>Watched On</th>
-            </tr>
-          </thead>
-          <tbody id="movie-table-body">
-          </tbody>
-        </table>
+    </div>
+    <h3>Movies watched recently</h3>
+    <div
+      class="jumbotron"
+      id="movie-table"
+      style="font-family: monospace; flex-direction: column; flex: auto;"
+    >
+      <div class="input-group input-group-sm">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Search Movie</span>
+        <input id="movie-search-field" type="text" class="form-control" aria-label="Small">
+      </div>
+      
+      <table style="font-size: 1rem;" class="table table-striped">
+        <thead>
+          <tr>
+            <th style="max-width: 460px;">Name</th>
+            <th>Rated (out of 10)</th>
+            <th>Watched On</th>
+          </tr>
+        </thead>
+        <tbody id="movie-table-body">
+        </tbody>
+      </table>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.js" ></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.js" ></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" ></script>
         <script src="./assets/js/watched-movies.js"></script>
       </div>
-    </div>
+  </div>
+
+  <!-- Footer -->
+  <div
+    class="mt-5 p-5 bg-dark text-light"
+    style="text-align: center;"
+  ><p> Made in 🇮🇳 </p>
   </div>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
@@ -112,5 +138,4 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
   </script>
 </body>
-
 </html>
