@@ -1,5 +1,28 @@
+.bg-dark {
+    background-color: #552244!important;
+}
+
 html {
     scroll-behavior: smooth;
+}
+
+body {
+    cursor: wait;
+    background-color: #cfd18687;
+    color: #552244;
+}
+
+hr {
+    border-width: 2px;
+    border-color: #552244;
+}
+
+table {
+    color: #552244!important;
+}
+
+.movie-section {
+    color: #552244
 }
 
 .profile {
@@ -10,7 +33,7 @@ html {
 .profile-icon {
     text-decoration: none;
     font-size: larger;
-    color: black;
+    color: #552244!important;
     padding: 0px;
 }
 
