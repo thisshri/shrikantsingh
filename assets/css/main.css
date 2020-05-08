@@ -1,48 +1,48 @@
 .bg-dark {
-    background-color: #552244!important;
+  background-color: #552244!important;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    cursor: wait;
-    background-color: lavenderblush;
-    color: #552244;
+  cursor: wait;
+  background-color: lavenderblush;
+  color: #552244;
 }
 
 hr {
-    border-width: 2px;
-    border-color: #552244;
+  border-width: 2px;
+  border-color: #552244;
 }
 
 table {
-    color: #552244!important;
+  color: #552244!important;
 }
 
 .movie-section {
-    color: #552244
+  color: #552244
 }
 
 .profile {
-    flex-direction: column;
-    margin: 100px 0px 100px 0px;
+  flex-direction: column;
+  margin: 100px 0px 100px 0px;
 }
 
 .profile-icon {
-    text-decoration: none;
-    font-size: larger;
-    color: #552244!important;
-    padding: 0px;
+  text-decoration: none;
+  font-size: larger;
+  color: #552244!important;
+  padding: 0px;
 }
 
 .ubuntu-font {
-    font-family: 'Ubuntu', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .navbar {
-    position: sticky;
-    top: 0px;
-    z-index: 1;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
 }
