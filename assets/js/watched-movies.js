@@ -25,6 +25,7 @@ const generateMovieTableBody = function(movies) {
       <th>
         <a
           href=${movie[_.indexOf(CSV_TITLE, "URL")]}
+          rel="noopener"
           target=_blank
         >
           ${movie[_.indexOf(CSV_TITLE, "Title")]}</th>
