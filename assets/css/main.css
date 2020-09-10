@@ -37,10 +37,6 @@ table {
   margin: 5px;
 }
 
-.ubuntu-font {
-  font-family: 'Ubuntu', sans-serif;
-}
-
 .navbar {
   position: sticky;
   top: 0px;
